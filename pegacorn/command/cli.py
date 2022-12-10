@@ -1,7 +1,7 @@
 import click
 
 from pegacorn import __version__
-from pegacorn import main
+from pegacorn.main import main
 
 
 @click.version_option(version=__version__)
@@ -12,22 +12,10 @@ from pegacorn import main
     is_flag=False,
     help="target file",
 )
-@click.option(
-    "-p",
-    "--permission",
-    is_flag=True,
-    help="List all permission",
-)
-@click.option(
-    "-a",
-    "--activity",
-    is_flag=True,
-    help="List all activities",
-)
 def entry_point(target_file):
     """PEGACORN"""
-
-    main(target_file)
+    if target_file:
+        main(target_file=target_file)
 
 
 if __name__ == "__main__":

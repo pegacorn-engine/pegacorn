@@ -21,6 +21,11 @@ setuptools.setup(
         "Operating System :: OS Independent",
         "Topic :: Security",
     ],
+    entry_points={
+        "console_scripts": [
+            "pegacorn=pegacorn.command.cli:entry_point",
+        ]
+    },
     python_requires=">=3.10",
     install_requires=[
         "androguard==3.4.0a1",

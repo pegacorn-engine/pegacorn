@@ -1,5 +1,5 @@
-from pegacorn.core.apk.apkinfo import Apkinfo
+from pegacorn.analysis.proc import proc_apk
 
 
-def main():
-    apk = Apkinfo("tests/pegasus.apk")
+def main(target_file):
+    proc_apk(target_file)
