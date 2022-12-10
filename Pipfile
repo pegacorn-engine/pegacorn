@@ -9,6 +9,7 @@ androguard = "3.4.0a1"
 codecov = "*"
 pytest-cov = "*"
 pegacorn = { editable = true, path = "." }
+black = "*"
 
 [dev-packages]
 black = "*"
